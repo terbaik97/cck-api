@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   rolify 
-  has_paper_trail versions: { class_name: "PaperTrail::UserVersion" }
-
+  has_paper_trail 
+  has_secure_password
   PASSWORD_REQUIREMENTS = /\A
     (?=.{8,})
   /x
