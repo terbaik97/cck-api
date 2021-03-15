@@ -47,3 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'paper_trail'
 
 gem 'rolify'
+
+gem 'jwt'
