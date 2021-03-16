@@ -49,3 +49,5 @@ gem 'paper_trail', '~> 11.1'
 gem 'rolify'
 
 gem 'jwt'
+
+gem "active_model_serializers"
