@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_024411) do
+ActiveRecord::Schema.define(version: 2021_03_16_144522) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+
+  create_table "pois", force: :cascade do |t|
+    t.string "user_id"
+    t.json "fields"
+    t.point "coordinate"
+    t.string "subcategory_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_pois_on_created_at"
+  end
+
+  create_table "subcategories", force: :cascade do |t|
+    t.string "subcategory_id"
+    t.string "url_icon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_subcategories_on_created_at"
+  end
+
+  create_table "user_actions", force: :cascade do |t|
+    t.string "user_id"
+    t.string "action_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_user_actions_on_created_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "nickname"
