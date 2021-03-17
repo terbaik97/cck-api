@@ -36,7 +36,11 @@ module Api
         def signup_params
           params.permit(
             :email,
-            :password
+            :password,
+            :nickname,
+            :full_name,
+            :mobile_number,
+            :nationality,
           )
         end
 
