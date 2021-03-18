@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "9485b1b8-85fa-420d-9d7a-c033ba322c7b",
+		"name": "CCK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "App_config",
+			"item": [
+				{
+					"name": "initial",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/{{api}}/{{v1}}/app_configs/initial",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{api}}",
+								"{{v1}}",
+								"app_configs",
+								"initial"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n \"nickname\": \"Kiong\",\r\n  \"full_name\": \"Kiong Kiong\",\r\n  \"email\": \"kiong@gmail.com\",\r\n  \"mobile_number\": \"60||123456789\",\r\n  \"nationality\": \"malaysian\",\r\n  \"password\": \"temp12345\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/{{api}}/{{v1}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{api}}",
+								"{{v1}}",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "api",
+			"value": "api"
+		},
+		{
+			"key": "v1",
+			"value": "v1"
+		}
+	]
+}

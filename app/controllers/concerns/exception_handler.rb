@@ -24,33 +24,33 @@ module ExceptionHandler
   
     private
       def record_not_found(ex)
-        json_response({
+        json_response(
           message: get_msg(ex),
           status: :not_found
-        })
+        )
       end
   
       # JSON response with message; Status code 422 - unprocessable entity
       def unprocessable_entity_request(ex)
-        json_response({
+        json_response(
           message: get_msg(ex),
           status: :unprocessable_entity
-        })
+        )
       end
   
       # JSON response with message; Status code 401 - Unauthorized
       def unauthorized_request(ex)
-        json_response({
+        json_response(
           message: get_msg(ex),
           status: :unauthorized
-        })
+        )
       end
   
       # def coming_soon_request(ex)
-      #   json_response({
+      #   json_response(
       #     message: get_msg(ex),
       #     status: 452 # coming soon
-      #   })
+      #   )
       # end
   
       private

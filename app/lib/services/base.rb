@@ -1,4 +1,3 @@
 class Services::Base
-    include ServiceBase
-  end
-  
+  include ServiceBase
+end
